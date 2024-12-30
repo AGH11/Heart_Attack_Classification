@@ -1,33 +1,57 @@
-# Machine Learning for Heart Disease Prediction
+# Heart Disease Prediction with Machine Learning
 
-This repository contains Python code for a machine learning project focused on predicting heart disease using the "heart.csv" dataset. The code is organized as follows:
+This repository contains a Python-based implementation of machine learning models to predict heart disease. The project utilizes multiple algorithms, including Logistic Regression, Decision Trees, and Support Vector Machines (SVM), to classify data from a heart disease dataset.
 
-## Data Loading and Exploration
-- The dataset is loaded using the Pandas library.
-- Initial exploration of the dataset, including data types and summary statistics.
+## Dataset
+The dataset used in this project is named `heart.csv`, which contains the following key features:
 
-## Data Preprocessing
-- Conversion of the 'oldpeak' column to the 'int64' data type.
-- Selection of relevant features for model training.
+- `age`: Age of the patient
+- `sex`: Gender of the patient (1 = male, 0 = female)
+- `cp`: Chest pain type
+- `trtbps`: Resting blood pressure (in mm Hg)
+- `chol`: Cholesterol levels (mg/dl)
+- `fbs`: Fasting blood sugar (>120 mg/dl, 1 = true, 0 = false)
+- `restecg`: Resting electrocardiographic results
+- `thalachh`: Maximum heart rate achieved
+- `exng`: Exercise-induced angina (1 = yes, 0 = no)
+- `oldpeak`: ST depression induced by exercise relative to rest
+- `slp`: The slope of the peak exercise ST segment
+- `caa`: Number of major vessels (0-3)
+- `thall`: Thalassemia status
+- `output`: Target variable (1 = heart disease present, 0 = not present)
 
-## Train-Test Split
-- Division of the dataset into training and testing sets using the train_test_split function from scikit-learn.
+## Features
 
-## Logistic Regression Model
-- Training a logistic regression model on the training set.
-- Prediction on the test set and evaluation using Jaccard score, log loss, and a classification report.
-- Visualization of the confusion matrix.
+- **Data Exploration**: Examines the structure of the dataset and provides value counts for each feature.
+- **Preprocessing**:
+  - Converts specific columns (e.g., `oldpeak`) to integers.
+  - Splits the data into training and testing sets.
+- **Model Training and Evaluation**:
+  - Logistic Regression: Predicts target values and evaluates performance using metrics like Jaccard Index, Log Loss, and Classification Reports.
+  - Decision Tree: Constructs a decision tree classifier and evaluates its accuracy.
+  - SVM: Implements a Support Vector Classifier with linear kernel and assesses its performance.
+- **Visualization**:
+  - Confusion matrices for each model to visualize prediction results.
+  - Decision tree structure exported and displayed as an image.
 
-## Decision Tree Classifier
-- Training a decision tree classifier on the training set.
-- Prediction on the test set and evaluation using Jaccard score, log loss, and a classification report.
-- Visualization of the confusion matrix.
+## Requirements
+- Python 3.7+
+- Required libraries:
+  ```bash
+  pip install pandas numpy matplotlib scikit-learn pydotplus
+  ```
 
-## Support Vector Machine (SVM) Classifier
-- Training a linear SVM classifier on the training set.
-- Prediction on the test set and evaluation using Jaccard score, log loss, and a classification report.
-- Visualization of the confusion matrix.
+## Results
+The performance of the models is evaluated using metrics such as accuracy, Jaccard Index, Log Loss, and classification reports. The confusion matrices provide insights into the true positive and negative rates.
 
-Note: Each model's performance metrics and confusion matrix are displayed for comprehensive evaluation.
+## Visualization Example
+### Decision Tree Structure
+![Decision Tree](HeartAttack.png)
 
-Feel free to explore and modify the code for further experimentation and improvement.
+### Confusion Matrix
+A sample confusion matrix is plotted for each model to compare predicted vs actual outcomes.
+
+## Future Work
+- Include additional feature engineering techniques to improve model performance.
+- Explore advanced machine learning algorithms like Random Forests and Neural Networks.
+- Perform hyperparameter tuning for better optimization.
