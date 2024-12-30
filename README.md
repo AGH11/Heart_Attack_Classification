@@ -46,7 +46,7 @@ The performance of the models is evaluated using metrics such as accuracy, Jacca
 
 ## Visualization Example
 ### Decision Tree Structure
-![Decision Tree](HeartAttack.png)
+![Decision Tree](HeartAttackDecisionTree.png)
 
 ### Confusion Matrix
 A sample confusion matrix is plotted for each model to compare predicted vs actual outcomes.
